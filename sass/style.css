@@ -1,0 +1,1108 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  width: 100%;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+main {
+  width: 100%;
+  height: 100vh;
+  overflow-x: hidden;
+}
+main .pcnav {
+  display: none;
+}
+main .mobile-burger {
+  position: absolute;
+  right: 5%;
+  top: 2%;
+  width: 50%;
+  height: 40px;
+  background-color: rgba(0, 0, 0, 0.973);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding-bottom: 1em;
+  padding-top: 5px;
+  -webkit-transition: height 0.5s, width 0.5s;
+  transition: height 0.5s, width 0.5s;
+  -webkit-transition-delay: 0s, 0.75s;
+          transition-delay: 0s, 0.75s;
+  z-index: 999999999999999800000000000000000000000;
+  overflow: hidden;
+}
+main .mobile-burger .logo {
+  position: absolute;
+  left: 7%;
+  top: 2%;
+  margin-top: 0.5em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+main .mobile-burger .logo h3 {
+  color: white;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+  font-weight: 900;
+  font-size: 19px;
+  letter-spacing: 2px;
+}
+main .mobile-burger .logo h6 {
+  color: #3fa0f0;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-weight: 900;
+  text-transform: uppercase;
+  font-size: 10px;
+}
+main .mobile-burger .in {
+  display: block;
+}
+main .mobile-burger nav {
+  overflow: hidden;
+  position: absolute;
+  width: 80%;
+  padding-left: 15px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 90%;
+  margin-top: 20%;
+  border-top: 2px solid rgba(128, 128, 128, 0.301);
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  display: none;
+  -webkit-transition-delay: 0.75s;
+          transition-delay: 0.75s;
+}
+main .mobile-burger nav a {
+  text-decoration: none;
+  cursor: pointer;
+}
+main .mobile-burger nav a li {
+  list-style: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 2em 0;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+main .mobile-burger nav a li img {
+  width: 2em;
+  margin-right: 20px;
+}
+main .mobile-burger nav a li p {
+  color: whitesmoke;
+  font-family: monospace;
+  font-size: 1.1em;
+}
+main .mobile-burger .hide {
+  display: block;
+}
+main .mobile-burger .burger-menu {
+  position: absolute;
+  margin-right: 10px;
+  right: 0;
+  width: 40px;
+  height: 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+main .mobile-burger .burger-menu::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 3px;
+  background-color: white;
+  border-radius: 1px;
+  -webkit-transform: translateY(-10px);
+          transform: translateY(-10px);
+  -webkit-box-shadow: 0px 10px white;
+          box-shadow: 0px 10px white;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+main .mobile-burger .burger-menu::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 3px;
+  background-color: white;
+  border-radius: 1px;
+  -webkit-transform: translateY(10px);
+          transform: translateY(10px);
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+main .active {
+  width: 70%;
+  height: 55%;
+  -webkit-transition: width 0.5s, height 0.5s;
+  transition: width 0.5s, height 0.5s;
+  -webkit-transition-delay: 0s, 0.75s;
+          transition-delay: 0s, 0.75s;
+}
+main .active .burger-menu::before {
+  -webkit-transform: translateY(0px) rotate(45deg);
+          transform: translateY(0px) rotate(45deg);
+  -webkit-box-shadow: 0px 0px white;
+          box-shadow: 0px 0px white;
+}
+main .active .burger-menu::after {
+  -webkit-transform: translateY(0px) rotate(-45deg);
+          transform: translateY(0px) rotate(-45deg);
+}
+main .bottomhead {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  background-color: #3fa0f0;
+  padding: 1.5em 0;
+  z-index: 999999;
+  overflow-x: hidden;
+}
+main .bottomhead .container {
+  overflow-x: hidden;
+  text-transform: initial;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 90%;
+  margin: 0 auto;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  line-height: 1em;
+}
+main .bottomhead .container .author {
+  margin-right: 1.5em;
+}
+main .bottomhead .container .author img {
+  width: 6em;
+  border-radius: 50%;
+}
+main .bottomhead .container h5 {
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+  color: white;
+  font-size: 15px;
+}
+main .bottomhead .container p {
+  font-size: 10px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-weight: 300;
+  color: gainsboro;
+}
+main .bottomhead .container h6 {
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+  color: whitesmoke;
+  font-size: 13px;
+}
+main .stripe {
+  width: 100%;
+  height: 100vh;
+  position: absolute;
+  -webkit-clip-path: polygon(0% 0%, 25% 0%, 60% 45%, 25% 100%, 0% 100%);
+          clip-path: polygon(0% 0%, 25% 0%, 60% 45%, 25% 100%, 0% 100%);
+  background-color: #2abbf559;
+  z-index: 9;
+  left: 0;
+  top: 0;
+}
+main .stripa {
+  width: 100%;
+  height: 100vh;
+  position: absolute;
+  -webkit-clip-path: polygon(0% 0%, 35% 0%, 70% 45%, 35% 100%, 0% 100%);
+          clip-path: polygon(0% 0%, 35% 0%, 70% 45%, 35% 100%, 0% 100%);
+  background-color: #2abbf531;
+  z-index: 9;
+  left: 0;
+  top: 0;
+}
+main .nav-button {
+  position: absolute;
+  width: 5em;
+  height: 2em;
+  top: 70%;
+  left: 40%;
+  -webkit-transform: translate(-40%, -70%);
+          transform: translate(-40%, -70%);
+  z-index: 10000000000000002000000;
+}
+main .auto-butto {
+  position: absolute;
+  width: 5em;
+  height: 2em;
+  top: 70%;
+  left: 40%;
+  -webkit-transform: translate(-40%, -70%);
+          transform: translate(-40%, -70%);
+  z-index: 9;
+}
+main .auto-butto #butto {
+  border: 2px solid #3fa0f0;
+  padding: 0 20px;
+  border-radius: 10px;
+  margin-right: 10px;
+  padding: 1px 15px 0 15px;
+  font-size: 2px;
+}
+main .auto-butto .color {
+  background-color: #3fa0f0;
+}
+main #button {
+  background-color: transparent;
+  border: 2px solid #3fa0f0;
+  padding: 0 20px;
+  border-radius: 10px;
+  margin-right: 10px;
+  padding: 1px 15px 0 15px;
+  font-size: 2px;
+}
+main input {
+  display: none;
+}
+main #radio1:checked ~ .carousel {
+  margin-left: 0%;
+}
+main #radio2:checked ~ .carousel {
+  margin-left: -100%;
+}
+main #radio3:checked ~ .carousel {
+  margin-left: -200%;
+}
+main .carousel {
+  width: 300%;
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  z-index: 1;
+  -webkit-transition: 0.8s ease-in-out;
+  transition: 0.8s ease-in-out;
+}
+main .carousel #secondslide {
+  background-image: url(../img/pexels-anamul-rezwan-1216589.jpg);
+}
+main .carousel #thirdslide {
+  background-image: url(../img/pexels-pixabay-159306.jpg);
+}
+main .carousel .slide {
+  width: 100%;
+  height: 100vh;
+  background-image: url(../img/pexels-quang-nguyen-vinh-2138126.jpg);
+  background-position: center;
+  background-size: cover;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: gray;
+  background-blend-mode: multiply;
+}
+main .carousel .slide .container {
+  width: 70%;
+  margin: 0 auto;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+  text-transform: uppercase;
+  color: white;
+  text-align: left;
+  z-index: 999;
+  margin-top: 0;
+}
+main .carousel .slide .container h6 {
+  font-size: 12px;
+  width: 90%;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-weight: 400;
+  color: whitesmoke;
+}
+main .carousel .slide .container h1 {
+  font-size: 30px;
+}
+main .carousel .slide .container .links {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: left;
+      -ms-flex-pack: left;
+          justify-content: left;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 1em 0;
+}
+main .carousel .slide .container .links a {
+  padding: 1em 2em;
+  font-size: 14px;
+  text-decoration: none;
+  color: black;
+  background-color: white;
+  border-radius: 5px;
+  text-transform: initial;
+  font-weight: 900;
+}
+main .carousel .slide .container .links a:last-child {
+  background-color: #3fa0f0;
+  margin-left: 0.5em;
+  color: white;
+}
+
+section {
+  padding: 2em 0;
+  width: 100%;
+}
+section .container {
+  width: 80%;
+  margin: 0 auto;
+  line-height: 2.5em;
+  text-align: center;
+}
+section .container .head {
+  position: relative;
+  width: 75%;
+  margin: 0 auto;
+  background-color: white;
+}
+section .container .head h1 {
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+  color: black;
+  font-size: 20px;
+  text-transform: uppercase;
+  width: 100%;
+  z-index: 100000000000000020000000000;
+}
+section .container .head h1::before {
+  content: "";
+  position: absolute;
+  width: 50%;
+  height: 1px;
+  background-color: gray;
+  left: -16%;
+  top: 65%;
+  z-index: -999999;
+}
+section .container .head h1::after {
+  content: "";
+  position: absolute;
+  width: 50%;
+  height: 1px;
+  background-color: gray;
+  right: -16%;
+  top: 65%;
+  z-index: -999999999;
+}
+section .container .lists {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 100%;
+  margin-top: 1em;
+  text-align: left;
+}
+section .container .lists div {
+  margin-bottom: 1em;
+}
+section .container .lists div .image {
+  width: 100%;
+  height: 15em;
+  background-image: url(../img/pexels-pixabay-259962.jpg);
+  background-position: center;
+  background-size: cover;
+}
+section .container .lists div h5 {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  color: black;
+  font-size: 16px;
+}
+section .container .lists div p {
+  line-height: 1.5em;
+  font-size: 15px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-weight: 300;
+  color: gray;
+  margin-bottom: 1em;
+}
+section .container .lists div a {
+  padding: 1em 2em;
+  font-size: 14px;
+  text-decoration: none;
+  color: white;
+  background-color: #3fa0f0;
+  border-radius: 5px;
+  text-transform: initial;
+  font-weight: 900;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+}
+
+article {
+  width: 100%;
+  padding: 2em 0;
+  background-color: whitesmoke;
+}
+article .container {
+  width: 80%;
+  margin: 0 auto;
+  line-height: 2.5em;
+  text-align: center;
+}
+article .container .head {
+  width: 75%;
+  margin: 0 auto;
+}
+article .container .head h1 {
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+  color: black;
+  font-size: 20px;
+  text-transform: uppercase;
+  width: 100%;
+  position: relative;
+  z-index: 999999999999999;
+}
+article .container .lists {
+  width: 100%;
+}
+article .container .lists .list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+article .container .lists .list:not(:last-child) {
+  margin: 2em 0;
+}
+article .container .lists .list .image {
+  background-color: #363636;
+  width: 40%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-radius: 50%;
+  margin-right: 3em;
+}
+article .container .lists .list .image img {
+  width: 2.5em;
+  padding: 1em;
+}
+article .container .lists .list .writeup {
+  text-align: left;
+  line-height: 1.5em;
+}
+article .container .lists .list .writeup p {
+  line-height: 1.2em;
+  font-size: 12px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-weight: 300;
+  color: gray;
+  margin: 0.5em 0;
+}
+article .container .lists .list .writeup h6 {
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+  color: black;
+  font-size: 18px;
+  position: relative;
+  line-height: 1em;
+}
+
+#range {
+  width: 100%;
+  padding: 2em 0;
+  background-image: url(../img/pexels-anamul-rezwan-1216589.jpg);
+  background-color: gainsboro;
+  background-blend-mode: multiply;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  z-index: -1;
+}
+#range .stripe {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  -webkit-clip-path: polygon(0% 0%, 30% 0%, 70% 50%, 30% 100%, 0% 100%);
+          clip-path: polygon(0% 0%, 30% 0%, 70% 50%, 30% 100%, 0% 100%);
+  background-color: rgba(0, 0, 0, 0.192);
+  z-index: -9;
+  left: 0;
+  top: 0;
+}
+#range .stripa {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  -webkit-clip-path: polygon(0% 0%, 40% 0%, 80% 50%, 40% 100%, 0% 100%);
+          clip-path: polygon(0% 0%, 40% 0%, 80% 50%, 40% 100%, 0% 100%);
+  background-color: rgba(0, 0, 0, 0.11);
+  z-index: -9;
+  left: 0;
+  top: 0;
+}
+#range .container {
+  z-index: 999999999;
+}
+#range .container h1 {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  color: white;
+  font-size: 25px;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+#range .container p {
+  color: gainsboro;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+  font-size: 14px;
+}
+
+footer {
+  padding: 2em 0;
+  background-color: #363636;
+  width: 100%;
+}
+footer .container {
+  grid-gap: 1em;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  width: 80%;
+  margin: 0 auto;
+}
+footer .container .menu h5 {
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+  color: white;
+  font-size: 16px;
+  text-align: right;
+}
+footer .container .menu .links {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin: 0.5em 0;
+  text-align: right;
+}
+footer .container .menu .links a {
+  text-decoration: none;
+  color: darkgray;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+  line-height: 1.5em;
+  font-size: 15px;
+}
+footer .container .touch h5 {
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+  color: white;
+  font-size: 16px;
+}
+footer .container .touch p {
+  color: darkgray;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+  line-height: 1.5em;
+  font-size: 15px;
+}
+footer .container .touch li {
+  list-style: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 90%;
+}
+footer .container .touch span {
+  color: darkgray;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+  line-height: 1.5em;
+  font-size: 14px;
+}
+footer .container .brand {
+  margin-top: 1em;
+  line-height: 1.5em;
+}
+footer .container .brand .logo h5 {
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+  color: white;
+  font-size: 16px;
+}
+footer .container .brand p {
+  color: darkgray;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+  line-height: 1.5em;
+  font-size: 14px;
+  width: 180%;
+}
+footer .container .brand .links {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 0.5em;
+}
+footer .container .brand .links .link {
+  margin-right: 1em;
+  background-color: #3fa0f0;
+  width: 3em;
+  height: 3em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-radius: 50%;
+}
+footer .container .brand .links .link img {
+  width: 1.5em;
+}
+
+@media only screen and (min-width: 1000px) {
+  main .pcnav {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    position: absolute;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    width: 80%;
+    left: 10%;
+    height: 100%;
+  }
+  main .pcnav .image {
+    z-index: 999999999999;
+    background-color: black;
+    border-radius: 50%;
+    width: 3em;
+    height: 3em;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    cursor: pointer;
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+    -webkit-transition-delay: 0.2s;
+            transition-delay: 0.2s;
+  }
+  main .pcnav .image img {
+    width: 1.5em;
+  }
+  main .pcnav .image:first-child img {
+    -webkit-transform: rotate(270deg);
+            transform: rotate(270deg);
+  }
+  main .pcnav .image:first-child:hover {
+    background-color: #3fa0f0;
+  }
+  main .pcnav .image:last-child {
+    background-color: #3fa0f0;
+  }
+  main .pcnav .image:last-child img {
+    -webkit-transform: rotate(90deg);
+            transform: rotate(90deg);
+  }
+  main .pcnav .image:last-child:hover {
+    background-color: black;
+  }
+  main .mobile-burger {
+    position: absolute;
+    right: 0%;
+    width: 100%;
+    height: 8%;
+    -webkit-box-pack: center space-between;
+        -ms-flex-pack: center space-between;
+            justify-content: center space-between;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    background-color: black;
+  }
+  main .mobile-burger .logo h3 {
+    font-size: 30px;
+  }
+  main .mobile-burger nav {
+    overflow: visible;
+    position: absolute;
+    right: 0;
+    width: 50%;
+    padding-left: 0;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: left;
+        -ms-flex-pack: left;
+            justify-content: left;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    text-align: right;
+    height: 100%;
+    margin-top: 0%;
+    border-top: none;
+    top: 0;
+    opacity: 1;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  main .mobile-burger nav a li {
+    margin-right: 1em;
+    background-color: transparent;
+    border-radius: 0.2em;
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+    -webkit-transition-delay: 0.2s;
+            transition-delay: 0.2s;
+    text-align: center;
+  }
+  main .mobile-burger nav a li:hover {
+    background-color: #3fa0f0;
+  }
+  main .mobile-burger nav a li img {
+    display: none;
+  }
+  main .mobile-burger nav a li p {
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 15px;
+    padding: 0.4em 1em;
+    color: white;
+    font-weight: 500;
+  }
+  main .mobile-burger nav a .site {
+    background-color: #3fa0f0;
+  }
+  main .mobile-burger .burger-menu {
+    display: none;
+  }
+  main .bottomhead {
+    padding: 1em 0;
+  }
+  main .bottomhead .container {
+    overflow-x: hidden;
+    text-transform: initial;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: 50%;
+    margin: 0 auto;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    line-height: 1.5em;
+  }
+  main .bottomhead .container .author img {
+    width: 7em;
+    border-radius: 50%;
+  }
+  main .bottomhead .container h5 {
+    font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+    color: white;
+    font-size: 20px;
+  }
+  main .bottomhead .container p {
+    font-size: 14px;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 300;
+    color: gainsboro;
+  }
+  main .bottomhead .container h6 {
+    font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+    color: whitesmoke;
+    font-size: 13px;
+  }
+  main .stripe {
+    -webkit-clip-path: polygon(0% 0%, 20% 0%, 40% 40%, 20% 100%, 0% 100%);
+            clip-path: polygon(0% 0%, 20% 0%, 40% 40%, 20% 100%, 0% 100%);
+  }
+  main .stripa {
+    -webkit-clip-path: polygon(0% 0%, 25% 0%, 45% 40%, 25% 100%, 0% 100%);
+            clip-path: polygon(0% 0%, 25% 0%, 45% 40%, 25% 100%, 0% 100%);
+  }
+  main .nav-button {
+    display: none;
+  }
+  main .auto-butto {
+    display: none;
+  }
+  main .carousel .slide .container {
+    width: 60%;
+  }
+  main .carousel .slide .container h6 {
+    font-size: 16px;
+    width: 90%;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 300;
+    color: whitesmoke;
+  }
+  main .carousel .slide .container h1 {
+    font-size: 55px;
+    width: 80%;
+    letter-spacing: 1px;
+    word-spacing: 2px;
+    font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+  }
+  main .carousel .slide .container .links a {
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+    -webkit-transition-delay: 0.2s;
+            transition-delay: 0.2s;
+  }
+  main .carousel .slide .container .links a:hover {
+    background-color: #3fa0f0;
+    color: white;
+  }
+  main .carousel .slide .container .links a:last-child {
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+    -webkit-transition-delay: 0.2s;
+            transition-delay: 0.2s;
+  }
+  main .carousel .slide .container .links a:last-child:hover {
+    background-color: white;
+    color: black;
+  }
+
+  section .container {
+    text-align: left;
+  }
+  section .container .head {
+    width: 100%;
+    margin: 0;
+    background-color: transparent;
+  }
+  section .container .head h1 {
+    font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+    color: black;
+    font-size: 20px;
+    text-transform: uppercase;
+    width: 100%;
+    z-index: 100000000000000020000000000;
+  }
+  section .container .head h1::before {
+    width: 0%;
+    height: 0px;
+  }
+  section .container .head h1::after {
+    width: 82%;
+    background-color: gray;
+    right: 0%;
+  }
+  section .container .lists {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 1em;
+  }
+  section .container .lists div {
+    margin-bottom: 0em;
+  }
+
+  article .container {
+    text-align: left;
+  }
+  article .container .head {
+    width: 100%;
+  }
+  article .container .head h1::after {
+    content: "";
+    position: absolute;
+    height: 1px;
+    width: 85%;
+    background-color: gray;
+    right: 0%;
+    bottom: 35%;
+  }
+  article .container .lists {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+  article .container .lists .list:not(:last-child) {
+    margin: 2em 0;
+  }
+  article .container .lists .list .image {
+    background-color: #363636;
+    width: 10%;
+    margin-right: 1em;
+  }
+  article .container .lists .list .image img {
+    width: 2.5em;
+    padding: 1em;
+  }
+  article .container .lists .list .writeup {
+    line-height: 2em;
+    width: 90%;
+  }
+  article .container .lists .list .writeup p {
+    width: 80%;
+    font-size: 13px;
+    margin-top: 0.5em;
+  }
+  article .container .lists .list .writeup h6 {
+    font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+    color: black;
+    font-size: 18px;
+    position: relative;
+    line-height: 1em;
+  }
+
+  #range {
+    padding: 4em 0;
+  }
+  #range .stripe {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    -webkit-clip-path: polygon(0% 0%, 25% 0%, 30% 45%, 25% 100%, 0% 100%);
+            clip-path: polygon(0% 0%, 25% 0%, 30% 45%, 25% 100%, 0% 100%);
+    background-color: rgba(0, 0, 0, 0.192);
+  }
+  #range .stripa {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    -webkit-clip-path: polygon(0% 0%, 35% 0%, 40% 45%, 35% 100%, 0% 100%);
+            clip-path: polygon(0% 0%, 35% 0%, 40% 45%, 35% 100%, 0% 100%);
+    background-color: rgba(0, 0, 0, 0.11);
+  }
+  #range .container {
+    z-index: 999999999;
+    width: 60%;
+  }
+  #range .container h1 {
+    font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+    font-size: 45px;
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  #range .container p {
+    line-height: 1.2em;
+    font-size: 14px;
+    margin-top: 1em;
+  }
+
+  footer {
+    padding: 2em 0;
+    background-color: #363636;
+    width: 100%;
+  }
+  footer .container {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+  footer .container .menu h5 {
+    text-align: center;
+  }
+  footer .container .menu .links {
+    text-align: center;
+  }
+  footer .container .menu .links a {
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+    -webkit-transition-delay: 0.2s;
+            transition-delay: 0.2s;
+  }
+  footer .container .menu .links a:hover {
+    color: #3fa0f0;
+  }
+  footer .container .touch p {
+    cursor: pointer;
+  }
+  footer .container .brand .logo h5 {
+    font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+    color: white;
+    font-size: 16px;
+  }
+  footer .container .brand p {
+    color: darkgray;
+    font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+    line-height: 1.5em;
+    font-size: 14px;
+    width: 180%;
+  }
+  footer .container .brand .links .link {
+    cursor: pointer;
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+    -webkit-transition-delay: 0.2s;
+            transition-delay: 0.2s;
+  }
+  footer .container .brand .links .link:hover {
+    background-color: black;
+  }
+}/*# sourceMappingURL=style.css.map */
